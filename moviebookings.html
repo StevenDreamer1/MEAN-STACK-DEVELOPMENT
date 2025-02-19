@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>JavaScript Ticket Booking</title> 
+    <style>
+        body {
+            font-family: "San Francisco", Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h4 {
+            font-size: 24px;
+            color: white;
+        }
+        .ticket-details {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head> 
+<body> 
+
+    <h4>Your Ticket Details:</h4>
+
+    <script> 
+        let movie = { 
+            name: "RRR", 
+            starring: 5, 
+            language: "Telugu", 
+            rating: 9.8, 
+        }; 
+
+        for (let key in movie) { 
+            document.write('<p class="ticket-details">' + key + " : " + movie[key] + '</p>'); 
+        }
+    </script>
+
+    <script> 
+        let x = Number(prompt("Enter No. of tickets: ")); 
+        document.write('<p class="ticket-details">Total no. of seats booked: ' + x + '</p>');
+        document.write('<p class="ticket-details">Cost of ' + x + ' tickets: ' + (150 * x) + '</p>');
+        document.write('<p class="ticket-details">Festival Season Discount: 10%</p>');
+        document.write('<p class="result">Total cost after discount: ' + ((x * 150) - (x * (10 / 100) * 150)) + '</p>');
+    </script>
+
+    <script> 
+        let i = 0; 
+        let y = [3, 5, 7, 9, 11]; 
+        let x = prompt("No of Tickets?"); 
+        x = Number(x); 
+
+        if (x <= 2) { 
+            document.write('<p class="ticket-details">Tickets booked <br> Cost for ' + x + ' Tickets: ' + (x * 150) + '</p>'); 
+        } else if (x >= 6) { 
+            document.write('<p class="ticket-details">Booking is not allowed</p>'); 
+        } else { 
+            document.write('<p class="ticket-details">Tickets booked <br> Cost for ' + x + ' Tickets after discount: ' + ((x * 150) - (x * (y[x - 1] / 100) * 150)) + '</p>');
+        } 
+    </script>
+
+    <script> 
+        let x = prompt("No of Tickets?"); 
+        x = Number(x); 
+        let i = 0; 
+        let y = 5; 
+        let total = 0; 
+
+        document.write('<p class="ticket-details"><b>Your Ticket Details:</b></p>'); 
+        for (i = 0; i < x; i++) { 
+            document.write('<p class="ticket-details">Ticket for Customer ' + (i + 1) + ' gets ' + y + '% discount, cost is: ' + ((150) - ((y / 100) * 150)) + '</p>'); 
+            total += ((150) - (x * (y / 100) * 150)); 
+            y += 2; 
+        }
+        document.write('<p class="result">For ' + x + ' tickets, you need to pay: ' + total + ' instead of ' + (x * 150) + '</p>');
+    </script>
+
+</body> 
+</html>
