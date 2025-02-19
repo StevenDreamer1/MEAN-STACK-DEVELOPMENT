@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>JavaScript</title> 
+    </head> 
+    <body> 
+        <script> 
+            let movie={ 
+                name:"RRR", 
+                starring:5, 
+                language:"Telugu", 
+                ratting: 9.8, 
+            }; 
+            for(key in movie){ 
+                document.write(key + " : "); 
+                document.write(movie[key]); 
+                document.write("<br>"); 
+            }; 
+        </script> 
+    </body> 
+</html> 
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>JavaScript</title> 
+    </head> 
+    <body> 
+        <h4>Your Ticket Details:</h4> 
+        <br> 
+        <script> 
+            let x= Number(prompt("Enter No. of tickets : ")); 
+            document.write("Total no. of seats Books : "+x); 
+            document.write("<br>"); 
+            document.write("Cost of "+x+" tickets : " +(150*x)); 
+            document.write("<br>"); 
+            document.write("Festival Season Discount : 10%"); 
+            document.write("<br>"); 
+            document.write("Total cost after discount is : "+((x*150)-(x*(10/100)*150))); 
+        </script> 
+    </body> 
+</html>
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>JavaScript</title> 
+    </head> 
+    <body> 
+        <h4>Your Ticket Details:</h4> 
+        <br> 
+        <script> 
+            let i=0; 
+            let y=[3,5,7,9,11]; 
+            let x=prompt("No of Tickets?"); 
+            x=Number(x); 
+            if(x<=2){ 
+                document.getElementById("11").innerHTML="Tickets booked <br>"+"Cost for "+x+" Tickets is 
+"+((x*150)); 
+            } 
+            else if(x>=6){ 
+                document.getElementById("11").innerHTML="Booking is not allowed"; 
+            } 
+            else{ 
+                document.write("Tickets booked <br>"+"Cost for "+x+" Tickets is "+((x*150)-(x*(y[x
+1]/100)*150))); 
+            } 
+        </script> 
+    </body> 
+</html>
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Booking Details</title> 
+</head> 
+<body> 
+    <script> 
+        let x=prompt("No of Tickets?"); 
+        x=Number(x); 
+        let i=0; 
+        let y=5; 
+        let total=0; 
+        document.write("<b>Your ticket Details:</b><br>") 
+        for(i=0;i<x;i++){ 
+        document.write("Ticket for Customer "+(i+1)+" gets "+y+"% discount! , cost is : " +((150)-((y/100)*150))+"<br>"); 
+            total+=((150)-(x*(y/100)*150)) 
+            y+=2 
+        } 
+        document.write("for "+x+" tickets You need to pay : "+total+" instead of "+(x*150)+" <br>") 
+ 
+    </script> 
+</body> 
+</html> 
